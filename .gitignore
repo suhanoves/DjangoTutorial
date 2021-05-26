@@ -1,0 +1,14 @@
+# Virtual Environment #
+env/
+
+# Django #
+__pycache__/
+/static/
+media
+*.log
+*.pot
+*.pyc
+*.sqlite3
+
+# PyCharm #
+.idea/
