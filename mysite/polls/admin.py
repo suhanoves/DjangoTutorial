@@ -1,6 +1,11 @@
 from django.contrib import admin
 
-from .models import Question
+from .models import Question, Choice
+
+
+class ChoiceInline(admin.TabularInline):
+    model = Choice
+    extra = 1
 
 
 @admin.register(Question)
@@ -10,3 +15,4 @@ class QuestionAdmin(admin.ModelAdmin):
         (None, {'fields': ['question_text']}),
 
     ]
+    inlines = [ChoiceInline]
